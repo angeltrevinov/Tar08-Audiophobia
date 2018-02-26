@@ -13,9 +13,9 @@ void AlgoritmoFloyd(int D[100][100], int C){
   for(int k = 0; k < C; k++){
     for(int i = 0; i < C; i++){
       for(int j = 0; j < C; j++){
-        if(D[i][k] > D[k][j] && D[i][k] <= 80){
+        if(D[i][k] > D[k][j] && D[i][k] <= D[i][j]){
           D[i][j] = D[i][k];
-        }else if(D[k][j] > D[i][k] && D[k][j] <= 80){
+        }else if(D[k][j] > D[i][k] && D[k][j] <= D[i][j]){
           D[i][j] = D[k][j];
         }
       }
